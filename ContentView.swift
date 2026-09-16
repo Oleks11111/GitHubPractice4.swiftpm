@@ -7,7 +7,9 @@ struct ContentView: View {
         Task(nameOfTask:"Buy Bread"),
     ]
     var body: some View {
-        ForEach(tasks, id: \.self){ currentTask in Text(currentTask.nameOfTask)}
+        List{
+            ForEach(tasks, id: \.self){ currentTask in Text(currentTask.nameOfTask)}
+        }
     }
     
 }
