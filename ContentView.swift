@@ -1,12 +1,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tasks = ["Hello","It's me","It's Verity"]
+    @State var tasks: [Task] = [
+        Task(nameOfTask:"Buy Milk"),
+        Task(nameOfTask:"Buy Eggs"),
+        Task(nameOfTask:"Buy Bread"),
+    ]
     var body: some View {
-        List{
-            ForEach(tasks,id: \.self){ taskIs in
-                Text(taskIs)
-            }
-        }
+        ForEach(tasks, id: \.self){ currentTask in Text(currentTask.nameOfTask)}
     }
+    
 }
+
+
