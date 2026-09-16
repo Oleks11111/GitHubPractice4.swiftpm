@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct task: Hashable {
+struct Task: Hashable {
     var nameOfTask: String
         
         

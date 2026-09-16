@@ -11,7 +11,7 @@ struct HeaderView: View {
     var body: some View{
         TextField("Enter a task", text: $typeIn)
         Button("Add"){
-            tasks.append(typeIn)
+            tasks.append(Task(nameOfTask: typeIn))
         }
     }
     
