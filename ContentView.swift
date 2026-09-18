@@ -9,7 +9,14 @@ struct ContentView: View {
         }
         .font(.system(size: 30))
     
-        List(tasks, id: \.self){ currentTask in Text(currentTask.nameOfTask)}
+        List(tasks, id: \.self){ currentTask in
+            HStack {
+                Button("delete") {
+                    tasks.remove(at: tasks.firstIndex(of: currentTask)!)
+                }
+                Text(currentTask.nameOfTask)
+            }
+        }
     }
 }
 
